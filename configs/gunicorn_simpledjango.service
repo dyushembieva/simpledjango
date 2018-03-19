@@ -8,10 +8,10 @@ PIDFile=/run/gunicorn/pid
 User=saikal
 Group=www-data
 RuntimeDirectory=gunicorn
-WorkingDirectory=/home/saikal/projects/simple_django
-ExecStart=/home/saikal/projects/simple_django/env/bin/gunicorn \
-          --access-logfile /home/saikal/projects/simple_django/logs/access.log \
-          --error-logfile /home/saikal/projects/simple_django/logs/error.log \
+WorkingDirectory=/home/saikal/simpledjango
+ExecStart=/home/saikal/simpledjango/env/bin/gunicorn \
+          --access-logfile /home/saikal/simpledjango/logs/access.log \
+          --error-logfile /home/saikal/simpledjango/logs/error.log \
           --pid /run/gunicorn/pid   \
           --env DJANGO_SETTINGS_MODULE=mysite.settings_prod \
           --workers 3 \
